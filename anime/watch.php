@@ -31,7 +31,6 @@ $stmt->execute([$anime_id]);
 <<<<<<< HEAD
 $query = "SELECT id, title, cover_image FROM anime WHERE genre LIKE ? AND id != ? LIMIT 4";
 =======
-$query = "SELECT id, title, poster_image FROM anime WHERE genre LIKE ? AND id != ? LIMIT 4";
 >>>>>>> 64ffc3ce046639559a138471d5f24f95d2b7d7a4
 $stmt = $db->prepare($query);
 $stmt->execute(["%" . $anime['genre'] . "%", $anime_id]);
