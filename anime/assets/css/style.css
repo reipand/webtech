@@ -1,0 +1,115 @@
+:root{
+    /* Color Palette */
+    --primary: #007bff;
+    --primary-dark: #0056b3;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --success-dark: #218838;
+    --danger: #dc3545;
+    --danger-dark: #c82333;
+    --warning: #ffc107;
+    --light: #f8f9fa;
+    --light-alt: #e9ecef;
+    --white: #ffffff;
+    --gray: #666;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    
+    /* Typography */
+    --font-family: 'Arial', sans-serif;
+    --font-size-base: 16px;
+    
+    /* Layout */
+    --border-radius: 8px;
+    --box-shadow: 0 0 20px var(--shadow-color);
+    --transition: all 0.3s ease;
+
+--bg-secondary: #f4f4f9;
+--text-secondary: #2c3e50;
+--accent-color: #5649d6;
+}
+        .login-container {
+            max-width: 500px;
+            margin: 5rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: var(--bg-secondary);
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .login-header img {
+            width: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .form-floating label {
+            color: var(--text-secondary);
+        }
+        
+        .btn-login {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .btn-login:hover {
+            background-color: #5649d6;
+        }
+        
+        .login-links {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        
+ .register-container {
+            max-width: 600px;
+            margin: 5rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: var(--bg-secondary);
+        }
+        
+        .register-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .register-header img {
+            width: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .form-floating label {
+            color: var(--text-secondary);
+        }
+        
+        .btn-register {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .btn-register:hover {
+            background-color: #5649d6;
+        }
+        
+        .register-links {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        
+        .admin-keyword {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
