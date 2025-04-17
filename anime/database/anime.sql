@@ -1,5 +1,4 @@
--- Active: 1738214133896@@127.0.0.1@3306@anime_db
--- Database: anime_db
+
 CREATE DATABASE ANIME_DB;
 USE ANIME_DB;
 -- Table: users
