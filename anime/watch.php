@@ -12,7 +12,7 @@ $database = new Database();
 $db = $database->getConnection();
 
 // Get anime details
-$query = "SELECT * FROM animes WHERE id = ?";
+$query = "SELECT * FROM anime WHERE id = ?";
 $stmt = $db->prepare($query);
 $stmt->execute([$anime_id]);
 $anime = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -23,12 +23,16 @@ if (!$anime) {
 }
 
 // Increment view count
-$query = "UPDATE animes SET views = views + 1 WHERE id = ?";
+$query = "UPDATE anime SET views = views + 1 WHERE id = ?";
 $stmt = $db->prepare($query);
 $stmt->execute([$anime_id]);
 
 // Get related anime
+<<<<<<< HEAD
+$query = "SELECT id, title, cover_image FROM anime WHERE genre LIKE ? AND id != ? LIMIT 4";
+=======
 $query = "SELECT id, title, poster_image FROM anime WHERE genre LIKE ? AND id != ? LIMIT 4";
+>>>>>>> 64ffc3ce046639559a138471d5f24f95d2b7d7a4
 $stmt = $db->prepare($query);
 $stmt->execute(["%" . $anime['genre'] . "%", $anime_id]);
 $related_animes = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -116,7 +120,7 @@ $related_animes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <?php foreach ($related_animes as $related): ?>
                                 <div class="col-6 mb-3">
                                     <a href="watch.php?id=<?= $related['id'] ?>">
-                                        <img src="<?= htmlspecialchars($related['poster_image']) ?>" 
+                                        <img src="<?= htmlspecialchars($related['cover_image']) ?>" 
                                              alt="<?= htmlspecialchars($related['title']) ?>" 
                                              class="img-fluid rounded">
                                         <h6 class="mt-2"><?= htmlspecialchars($related['title']) ?></h6>
