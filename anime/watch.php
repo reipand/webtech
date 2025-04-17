@@ -28,10 +28,7 @@ $stmt = $db->prepare($query);
 $stmt->execute([$anime_id]);
 
 // Get related anime
-<<<<<<< HEAD
 $query = "SELECT id, title, cover_image FROM anime WHERE genre LIKE ? AND id != ? LIMIT 4";
-=======
->>>>>>> 64ffc3ce046639559a138471d5f24f95d2b7d7a4
 $stmt = $db->prepare($query);
 $stmt->execute(["%" . $anime['genre'] . "%", $anime_id]);
 $related_animes = $stmt->fetchAll(PDO::FETCH_ASSOC);
